@@ -1,17 +1,11 @@
 {
-	"name": "@finehance/prettier-config",
+	"name": "@finehance/eslint-config-typescript",
 	"version": "1.0.0",
-	"description": "prettier shared config",
+	"description": "eslint shared typescript configuration",
 	"author": "Karol Stopyra <stopyransky@gmail.com>",
 	"homepage": "https://github.com/finehance/mono-config#readme",
 	"license": "MIT",
 	"main": "index.js",
-	"directories": {
-		"lib": "lib"
-	},
-	"files": [
-		"lib"
-	],
 	"publishConfig": {
 		"access": "public"
 	},
@@ -26,6 +20,8 @@
 		"url": "https://github.com/finehance/mono-config/issues"
 	},
 	"dependencies": {
-		"prettier": "^2.2.1"
+		"@typescript-eslint/eslint-plugin": "^3.5.0",
+		"@typescript-eslint/parser": "^3.5.0",
+		"eslint-import-resolver-typescript": "^2.0.0"
 	}
 }
