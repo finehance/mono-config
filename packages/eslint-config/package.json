@@ -1,0 +1,31 @@
+{
+	"name": "@finehance/eslint-config",
+	"version": "0.0.1",
+	"description": "eslint shared configuration",
+	"author": "Karol Stopyra <stopyransky@gmail.com>",
+	"homepage": "https://github.com/finehance/mono-config#readme",
+	"license": "MIT",
+	"main": "index.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"files": [
+		"lib"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/finehance/mono-config.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: run tests from root\" && exit 1"
+	},
+	"bugs": {
+		"url": "https://github.com/finehance/mono-config/issues"
+	},
+	"devDependencies": {
+		"eslint": "^7.20.0"
+	}
+}
