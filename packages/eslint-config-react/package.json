@@ -1,6 +1,6 @@
 {
 	"name": "@finehance/eslint-config-react",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "eslint shared react configuration",
 	"author": "Karol Stopyra <stopyransky@gmail.com>",
 	"homepage": "https://github.com/finehance/mono-config#readme",
