@@ -1,6 +1,6 @@
 {
 	"name": "@finehance/eslint-config-base",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"description": "shared eslint config base",
 	"author": "Karol Stopyra <stopyransky@gmail.com>",
 	"homepage": "https://github.com/finehance/mono-config#readme",
