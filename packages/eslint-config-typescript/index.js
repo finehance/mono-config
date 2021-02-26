@@ -1,36 +1,37 @@
 module.exports = {
+	env: {
+		browser: true,
+		node: true,
+		es6: true,
+		es2020: true,
+		commonjs: true,
+	},
 	extends: [
-		'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-		'plugin:import/typescript',
+		'plugin:@typescript-eslint/recommended',
+		'@finehance/eslint-config-base', // has to be at the end because ts eslint plugin overrides some eslint rules
 	],
-	parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-		sourceType: 'module', // Allows for the use of imports
+		ecmaFeatures: {
+			jsx: true,
+		},
+		ecmaVersion: 2020,
+		sourceType: 'module',
 	},
 	plugins: ['@typescript-eslint'],
 	rules: {
-		'no-unused-vars': 'error',
-		quotes: ['error', 'single'],
-		'sort-imports': [
-			'error',
-			{
-				ignoreCase: false,
-				ignoreDeclarationSort: true,
-				ignoreMemberSort: false,
-				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-			},
-		],
-		'sort-keys': [
-			'error',
-			'asc',
-			{ caseSensitive: true, minKeys: 2, natural: false },
-		],
+		'no-unused-vars': 'off', // to avoid doubled notifications from eslint (via typescript-eslint/recommended)
 		'@typescript-eslint/no-explicit-any': 'off',
+		'@typescript-eslint/no-unused-vars': 'warn',
+		'@typescript-eslint/no-empty-function': 'warn',
 	},
-	settings: {
-		'import/resolver': {
-			typescript: {},
+	overrides: [
+		{
+			files: ['**/*.jsx', '**/*.js'],
+			rules: {
+				'no-unused-vars': 'off', // to avoid doubled notifications from eslint (via typescript-eslint/recommended)
+				'@typescript-eslint/explicit-module-boundary-types': 'off',
+			},
 		},
-	},
+	],
 };

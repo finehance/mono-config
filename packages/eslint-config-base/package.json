@@ -1,7 +1,7 @@
 {
-	"name": "@finehance/prettier-config",
+	"name": "@finehance/eslint-config-base",
 	"version": "1.0.3",
-	"description": "prettier shared config",
+	"description": "shared eslint config base",
 	"author": "Karol Stopyra <stopyransky@gmail.com>",
 	"homepage": "https://github.com/finehance/mono-config#readme",
 	"license": "MIT",
@@ -19,7 +19,7 @@
 	"bugs": {
 		"url": "https://github.com/finehance/mono-config/issues"
 	},
-	"dependencies": {
-		"prettier": "^2.2.1"
+	"devDependencies": {
+		"eslint": ">=7"
 	}
 }
