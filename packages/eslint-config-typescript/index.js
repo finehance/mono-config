@@ -24,13 +24,21 @@ module.exports = {
 		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'@typescript-eslint/no-empty-function': 'warn',
+		'@typescript-eslint/explicit-module-boundary-types': [
+			'warn',
+			{
+				allowArgumentsExplicitlyTypedAsAny: true,
+				allowHigherOrderFunctions: true,
+			},
+		],
 	},
 	overrides: [
 		{
-			files: ['**/*.jsx', '**/*.js'],
+			files: ['**/*.jsx', '**/*.tsx', '**/*.js'],
 			rules: {
 				'no-unused-vars': 'off', // to avoid doubled notifications from eslint (via typescript-eslint/recommended)
 				'@typescript-eslint/explicit-module-boundary-types': 'off',
+				'@typescript-eslint/explicit-function-return-type': 'off',
 			},
 		},
 	],
